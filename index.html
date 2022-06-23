@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>model</title>
+</head>
+
+<body>
+ <div class="login">
+	<h1 style="color:rgba(24, 199, 44, 0.715) ;"><em>Prediction of Bond Strength of the concrete</em></h1>
+ 
+     <!-- Main Input For Receiving Query to our ML -->
+    <form style=text-align:center action="{{url_for('predict')}}"method="post">
+    	<input style="border: 2px solid rgb(2, 2, 2);padding:5px;" type="number" name="sepal length" placeholder="sl(cm)"  /><p><small>eg:1-100</small></p>
+      <input style="border: 2px solid rgb(4, 4, 4);padding:5px;" name="number" name="sepal width" placeholder="sw(cm)"  /><p><small>eg:1-100</small></p>
+      <input style="border: 2px solid rgb(2, 2, 2);padding:5px;" type="number" name="petal length" placeholder="pl(cm)"  /><p><small>eg:1-100</small></p>
+      <input style="border: 2px solid rgb(2, 2, 2);padding:5px;" type="number" name="petal width" placeholder="pw(cm)"  /><p><small>eg:1-100</small></p>
+      
+
+        <button class="jeeet" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        
+    </form>
+
+   <br>
+   {{ prediction_text }}
+   <br>
+
+ </div>
+ <style>
+  body{
+    text-align: center;
+    background-image: url('if.jpeg');
+  }
+  
+ </style>
+
+
+
+</body>
+</html>
